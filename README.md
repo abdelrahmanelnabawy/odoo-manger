@@ -34,9 +34,7 @@ To learn the software, we recommend the <a href="https://www.odoo.com/slides">Od
 The Updated Version of Odoo
 -------------------------
 
-This new version of odoo is aim to help to create the model, and build a view file and update the access file csv and also __mainfest__.py file
-
-to do so you need to specify two thing
+This latest version of Odoo is designed to facilitate the creation of models, construction of view files, and updating of access and manifest CSV files. To achieve this, it is essential to specify two key elements
 
 1. The module path
 2. The list of new model you want to add to this module it can take as you wish.
