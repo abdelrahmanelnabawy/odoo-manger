@@ -33,3 +33,15 @@ To learn the software, we recommend the <a href="https://www.odoo.com/slides">Od
 
 The Updated Version of Odoo
 -------------------------
+
+This new version of odoo is aim to help to create the model, and build a view file and update the access file csv and also __mainfest__.py file
+
+to do so you need to specify two thing
+
+1. The module path
+2. The list of new model you want to add to this module it can take as you wish.
+
+ex.
+''''
+  ./odoo-bin model /path/to/module/ model1 model2
+''''
