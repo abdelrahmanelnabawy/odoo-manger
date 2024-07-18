@@ -34,7 +34,7 @@ To learn the software, we recommend the <a href="https://www.odoo.com/slides">Od
 The Updated Version of Odoo
 -------------------------
 
-This latest version of Odoo is designed to facilitate the creation of models, construction of view files, and updating of access and manifest CSV files. To achieve this, it is essential to specify two key elements
+This new version of Odoo is designed to facilitate the creation of models, construction of view files, and updating of access and manifest CSV files. To achieve this, it is essential to specify two key elements
 
 1. The module path
 2. The list of new model you want to add to this module it can take as you wish.
