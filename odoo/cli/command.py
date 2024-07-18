@@ -3,7 +3,7 @@ import logging
 import os
 import sys
 from pathlib import Path
-
+from .manger import Model
 import odoo
 from odoo.modules import get_modules, get_module_path, initialize_sys_path
 
@@ -37,6 +37,16 @@ class Help(Command):
         ))
 
 def main():
+    if(sys.argv[1] == 'model'):
+        n = len(sys.argv)
+        if( n >= 3 ):
+            module_path = f"{sys.path[0]}{sys.argv[2]}"
+            for i in range(3,n):
+                model = Model(module_path,sys.argv[i])
+                model.build()
+        else:
+            print("Please check that you entered the module path and at least one folder new model")
+        return;
     args = sys.argv[1:]
 
     # The only shared option is '--addons-path=' needed to discover additional
