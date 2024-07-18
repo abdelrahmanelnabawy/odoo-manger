@@ -42,6 +42,6 @@ to do so you need to specify two thing
 2. The list of new model you want to add to this module it can take as you wish.
 
 ex.
-''''
-  ./odoo-bin model /path/to/module/ model1 model2
-''''
+```bash
+./odoo-bin model /path/to/module/ model1 model2
+```
