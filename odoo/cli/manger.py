@@ -48,9 +48,9 @@ class Model:
 <data>
     <!-- explicit list view definition -->
     <!--
-        <record model="ir.ui.view" id="{{self.model_class_name}}.list">
-        <field name="name">{{self.model_class_name}} list</field>
-        <field name="model">{{self.model_name}}</field>
+        <record model="ir.ui.view" id="{self.model_class_name}.list">
+        <field name="name">{self.model_class_name} list</field>
+        <field name="model">{self.model_name}</field>
         <field name="arch" type="xml">
             <tree>
                 <field name="name"/>
@@ -63,24 +63,24 @@ class Model:
 
     <!-- actions opening views on models -->
     <!--
-        <record model="ir.actions.act_window" id="{{self.model_class_name}}.action_window">
-        <field name="name">{{self.model_class_name}} window</field>
-        <field name="res_model">{{self.model_name}}</field>
+        <record model="ir.actions.act_window" id="{self.model_class_name}.action_window">
+        <field name="name">{self.model_class_name} window</field>
+        <field name="res_model">{self.model_name}</field>
         <field name="view_mode">tree,form</field>
         </record>
     -->
 
     <!-- server action to the one above -->
     <!--
-        <record model="ir.actions.server" id="{{self.model_class_name}}.action_server">
-        <field name="name">{{self.model_class_name}} server</field>
-        <field name="model_id" ref="model_{{self.model_class_name}}_{{self.model_class_name}}"/>
+        <record model="ir.actions.server" id="{self.model_class_name}.action_server">
+        <field name="name">{self.model_class_name} server</field>
+        <field name="model_id" ref="model_{self.model_class_name}_{self.model_class_name}"/>
         <field name="state">code</field>
         <field name="code">
             action = {{
                 "type": "ir.actions.act_window",
                 "view_mode": "tree,form",
-                "res_model": "{{self.model_name}}",
+                "res_model": "{self.model_name}",
             }}
         </field>
         </record>
@@ -88,19 +88,19 @@ class Model:
 
     <!-- Top menu item -->
     <!--
-        <menuitem name="test" id="{{self.model_class_name}}.menu_root"/>
+        <menuitem name="test" id="{self.model_class_name}.menu_root"/>
     -->
     <!-- menu categories -->
     <!--
-        <menuitem name="Menu 1" id="{{self.model_class_name}}.menu_1" parent="{{self.model_class_name}}.menu_root"/>
-        <menuitem name="Menu 2" id="{{self.model_class_name}}.menu_2" parent="{{self.model_class_name}}.menu_root"/>
+        <menuitem name="Menu 1" id="{self.model_class_name}.menu_1" parent="{self.model_class_name}.menu_root"/>
+        <menuitem name="Menu 2" id="{self.model_class_name}.menu_2" parent="{self.model_class_name}.menu_root"/>
     -->
     <!-- actions -->
     <!--
-        <menuitem name="List" id="{{self.model_class_name}}.menu_1_list" parent="{{self.model_class_name}}.menu_1"
+        <menuitem name="List" id="{self.model_class_name}.menu_1_list" parent="{self.model_class_name}.menu_1"
                 action="test.action_window"/>
-        <menuitem name="Server to list" id="{{self.model_class_name}}" parent="{{self.model_class_name}}.menu_2"
-                action="{{self.model_class_name}}.action_server"/>
+        <menuitem name="Server to list" id="{self.model_class_name}" parent="{self.model_class_name}.menu_2"
+                action="{self.model_class_name}.action_server"/>
     -->
 </data>
 </odoo>
