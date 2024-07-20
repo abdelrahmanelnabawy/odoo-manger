@@ -43,3 +43,4 @@ ex.
 ```bash
 ./odoo-bin model /path/to/module/ model1 model2
 ```
+note** there's model1 -> Model1 class name and model1, if the model name consist of 2 words you have to take like model.name should be like this and class name will be ModelClass.
